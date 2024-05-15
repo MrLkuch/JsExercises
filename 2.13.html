@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/xovufesiho/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+  </head>
+  <body>
+    <script id="jsbin-javascript">
+      //2.13
+      // Last loop value
+
+      let i = 3;
+
+      while (i) {
+        alert(i--);
+      }
+
+      // last value is 1
+
+
+
+      // Which values does the while loop show?
+
+      i = 0;
+      while (++i < 5) alert(i);
+
+      // 1,2,3,4
+
+      i = 0;
+      while (i++ < 5) alert(i);
+
+      // 1,2,3,4,5
+
+
+
+      // Which values get shown by the "for" loop?
+
+      for (let i = 0; i < 5; ++i) alert(i);
+
+      for (let i = 0; i < 5; i++) alert(i);
+
+      // the outputs are the same
+
+
+
+      // Output even numbers in the loop
+
+      for (let i = 2; i <= 10; i++) {
+        if (i % 2 == 0) {
+          alert(i);
+        }
+      }
+
+
+
+      // Replace "for" with "while"
+
+      i = 0;
+      while (i < 3) {
+        alert(`number ${i}!`);
+        i++;
+      }
+
+
+
+      // Repeat until the input is correct
+
+      let getNumber = +prompt("choose a number", 0);
+      while (getNumber <= 100 && getNumber) {
+        getNumber = +prompt("choose a number", 0);
+      }
+      // other answer
+      let num;
+
+      do {
+        num = prompt("Enter a number greater than 100?", 0);
+      } while (num <= 100 && num);
+
+
+
+      // Output prime numbers
+
+      let n = 10;
+      searchPrime:
+      for (let i = 2; i <= n; i++) {
+        for (let j = 2; j < i; j++) {
+          if (i % j == 0) continue searchPrime;
+        }
+        alert(i);
+      }
+
+    </script>
+  </body>
+</html>

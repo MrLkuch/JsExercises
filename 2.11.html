@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/xovufesiho/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+  </head>
+  <body>
+    <script id="jsbin-javascript">
+      'use script';
+
+      //2.11
+      // What's the result of OR?
+
+      alert(null || 2 || undefined); // 2
+
+
+
+      // What's the result of OR'ed alerts?
+
+      alert(alert(1) || 2 || alert(3)); // show alert 1 then show 2
+
+
+
+      // What is the result of AND?
+
+      alert(1 && null && 2); // null
+
+
+
+      // What is the result of AND'ed alerts?
+
+      alert(alert(1) && alert(2)); // show alert 1 then undefined since alert return that
+
+
+
+      // The result of OR AND OR
+
+      alert(null || 2 && 3 || 4); // 3
+
+
+
+      // Check the range between
+
+      if (age >= 14 && age <= 90);
+
+
+
+      // Check the range outside
+
+      if (!(age >= 14 && age <= 90));
+      if (age < 14 || age > 90);
+
+
+
+      // A question about "if"
+
+      if (-1 || 0) alert('first'); // run
+      if (-1 && 0) alert('second'); // doesn't run
+      if (null || -1 && 1) alert('third'); // run
+
+
+
+      // Check the login
+
+      let getUserName = prompt("Who's there ?");
+      if (getUserName === 'Admin') {
+        let getPassword = prompt('Password ?');
+        if (getPassword === 'TheMaster') {
+          alert('Welcome!')
+        } else if (getPassword === '' || getPassword === null) {
+          alert('Canceled')
+
+        } else {
+          alert("Wrong password");
+
+        }
+      } else if (getUserName === '' || getUserName === null) {
+        alert('Canceled')
+
+      } else {
+        alert("I don't know you");
+
+      }
+    </script>
+  </body>
+</html>

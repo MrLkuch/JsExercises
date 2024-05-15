@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/xovufesiho/5/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+  </head>
+  <body>
+    <script id="jsbin-javascript">
+      // 2.15
+      // Is "else" required?
+      // there's no difference if the first condition is false it will either way return the prompt.
+
+      // Rewrite the function using '?' or '||'
+
+      function checkAge(age) {
+        return (age > 18) ? true : confirm('Did parents allow you?');
+      }
+
+      function checkAge(age) {
+        return (age > 18) || confirm('Did parents allow you?');
+      }
+
+
+
+      // Function min(a, b)
+
+      function min(a, b) {
+        if (a < b) {
+          return a;
+        } else {
+          return b;
+        }
+
+      }
+
+
+
+      // Function pow(x,n)
+
+      /*function pow(){
+        let x = +prompt('x?');
+        let n = +prompt('n?');
+        
+        if(n<1){
+          alert('power n must be a positive number');
+        }else{
+            let result = x;
+      
+            for (let i = 1; i < n; i++) {
+              result *= x;
+        }
+      
+        return alert(result);
+      
+        }
+      
+      }
+      
+      pow();*/
+
+      function pow(x, n) {
+        let result = x;
+
+        for (let i = 1; i < n; i++) {
+          result *= x;
+        }
+
+        return alert(result);
+
+      }
+
+
+
+      let x = +prompt('x?');
+      let n = +prompt('n?');
+
+      if (n < 1) {
+        alert('power n must be a positive number');
+      } else {
+        pow(x, n);
+      }
+    </script>
+  </body>
+</html>

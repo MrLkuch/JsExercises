@@ -1,4 +1,5 @@
 // https://javascript.info/object#hello-object
+'use strict';
 
 let user = new Object(); // or let user = {};
 user.name = 'John';

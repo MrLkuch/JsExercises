@@ -1,4 +1,5 @@
 // https://javascript.info/object#check-for-emptiness
+'use strict';
 
 function isEmpty(obj) {
     for (let key in obj) {
